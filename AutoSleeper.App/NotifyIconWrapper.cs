@@ -15,7 +15,6 @@ namespace AutoSleeper.App
         public NotifyIconWrapper()
         {
             InitializeComponent();
-
             toolStripMenuItem_Open.Click += ToolStripMenuItem_Open_Click;
             toolStripMenuItem_Exit.Click += ToolStripMenuItem_Exit_Click;
         }
@@ -39,5 +38,9 @@ namespace AutoSleeper.App
             Application.Current.Shutdown();
         }
 
+        public void ShowBalloonTip(int timeoutMilliSec, string tipTitle, string tipText)
+        {
+            notifyIcon.ShowBalloonTip(timeoutMilliSec, tipTitle, tipText, System.Windows.Forms.ToolTipIcon.Info);
+        }
     }
 }
