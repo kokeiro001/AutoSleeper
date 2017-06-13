@@ -49,10 +49,6 @@ namespace AutoSleeper.App
                 // スリープする
                 SleepPC();
             }
-            else
-            {
-                PopupSleepWarning();
-            }
         }
 
         private void PopupSleepWarning()
